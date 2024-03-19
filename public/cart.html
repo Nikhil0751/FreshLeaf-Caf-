@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    <title>MyCart</title>
+    <style>
+  @media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+}
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+      if(!localStorage.getItem("ActiveUser"))
+      location.replace("./index.html");
+        var p1 = 0, p2 =0, p3 = 0, p4 = 0, p5 =0, p6 =0;
+       $("#btn1").click(function(){
+         var price = $("#form1").val() * 5;
+          p1 = price;
+         $("#price1").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn2").click(function(){
+         var price = $("#form1").val() * 5;
+          p1 = price;
+         $("#price1").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn3").click(function(){
+         var price = $("#form2").val() * 7;
+          p2 = price;
+         $("#price2").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn4").click(function(){
+         var price = $("#form2").val() * 7;
+          p2 = price;
+         $("#price2").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn5").click(function(){
+         var price = $("#form3").val() * 4;
+          p3 = price;
+         $("#price3").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn6").click(function(){
+         var price = $("#form3").val() * 4;
+         p3 = price;
+         $("#price3").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn7").click(function(){
+         var price = $("#form4").val() * 6;
+          p4 = price;
+         $("#price4").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn8").click(function(){
+         var price = $("#form4").val() * 6;
+          p4 = price;
+         $("#price4").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn9").click(function(){
+         var price = $("#form5").val() * 3;
+         p5 = price;
+         $("#price5").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn10").click(function(){
+         var price = $("#form5").val() * 3;
+          p5 = price;
+         $("#price5").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn11").click(function(){
+         var price = $("#form6").val() * 10;
+         p6 = price;
+         $("#price6").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#btn12").click(function(){
+         var price = $("#form6").val() * 10;
+          p6 = price;
+         $("#price6").html("$"+price+".00");
+         $("#sub").html("$"+(p1+p2+p3+p4+p5+p6)+".00");
+         $("#total").html("$"+(p1+p2+p3+p4+p5+p6+2)+".00");
+       })
+       $("#logout").click(function(){
+        localStorage.removeItem("ActiveUser");
+        location.href="./index.html";
+       })
+       $("#checkout").click(function(){
+        $("#finalSubtotal").html("Subtotal Amount ==> "+$("#sub").html());
+        $("#dilv").html("Delivery Charges ==> "+"$2.00");
+        $("#finalTotal").html("Total Amount ==> "+$("#total").html());
+       })
+    });
+
+    function doUpdateUp(event) {
+         event.parentNode.querySelector('input[type="number"]').stepUp();
+         changeValueExternally();
+        }
+
+        function doUpdateDown(event){
+         event.parentNode.querySelector('input[type=number]').stepDown();
+        }
+    function leave(){
+     return "Sure do you Want to Leave";
+    }
+
+</script>
+  
+<body onbeforeunload="return leave()">
+    
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid sticky-top px-0" >
+            <div class="container-fluid topbar bg-dark d-none d-lg-block" style="display: flex;flex-direction: row;">
+                <div class="container px-0" >
+                    <div class="topbar-top d-flex justify-content-between flex-lg-wrap">
+                        <div class="top-info flex-grow-0">
+                            <span class="rounded-circle btn-sm-square bg-primary me-2">
+                                <i class="fas fa-bolt text-white"></i>
+                            </span>
+                            <div class="pe-2 me-3 border-end border-white d-flex align-items-center">
+                                <p class="mb-0 text-white fs-6 fw-normal">Welcome</p>
+                            </div>
+                            <div class="overflow-hidden" style="width: 650px;">
+                                <div id="note" class="ps-2">
+                                    <img src="img/features-fashion.jpg" class="img-fluid rounded-circle border border-3 border-primary me-2" style="width: 30px; height: 30px;" alt="">
+                                    <a href="#"><p class="text-white mb-0 link-hover">"Savor the flavor with our dishes where every bite is a taste of perfection!"</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-link flex-lg-wrap">
+                            <i class="fas fa-calendar-alt text-white border-end border-secondary pe-2 me-2"> <span class="text-body">Wednesday, 20<sup>th</sup> March</span></i>
+                            <div class="d-flex icon">
+                                <p class="mb-0 text-white me-2">Follow Us:</p>
+                                <a href="https://www.instagram.com/cn_groups/" target="_blank" class="me-2"><i class="fab fa-facebook-f text-body link-hover"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank" class="me-2"><i class="fab fa-twitter text-body link-hover"></i></a>
+                                <a href="https://twitter.com/" target="_blank" class="me-2"><i class="fab fa-instagram text-body link-hover"></i></a>
+                                <a href="https://www.youtube.com/" target="_blank" class="me-2"><i class="fab fa-youtube text-body link-hover"></i></a>
+                                <a href="https://www.linkedin.com/feed/" target="_blank" class="me-2"><i class="fab fa-linkedin-in text-body link-hover"></i></a>
+                                <a href="https://www.skype.com/" target="_blank" class="me-2"><i class="fab fa-skype text-body link-hover"></i></a>
+                                <a href="https://in.pinterest.com/" target="_blank" class=""><i class="fab fa-pinterest-p text-body link-hover"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-light">
+                <div class="container px-0">
+                    <nav class="navbar navbar-light navbar-expand-xl">
+                        <a href="index.html" class="navbar-brand mt-3">
+                            <p class="text-primary display-6 mb-2" style="line-height: 0.5;">FreshLeaf</p>
+                            <small class="text-body fw-normal" style="letter-spacing: 12px;"><center>Café</center></small>
+                        </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-primary"></span>
+                        </button>
+                        <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto border-top">
+                                <a href="home.html" class="nav-item nav-link">Home</a>
+                                <a href="cart.html" class="nav-item nav-link active">MyCart</a>
+                                <a href="detail-page.html" class="nav-item nav-link">More Info</a>
+                                <a href="404.html" class="nav-item nav-link">Traffic Demo</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                            </div>
+                            <div class="d-flex flex-nowrap border-top pt-3 pt-xl-0">
+                                <div class="d-flex">
+                                    <img src="img/weather-icon.png" class="img-fluid w-100 me-2" alt="">
+                                    <div class="d-flex align-items-center">
+                                        <strong class="fs-4 text-secondary">28°C</strong>
+                                        <div class="d-flex flex-column ms-2" style="width: 150px;">
+                                            <span class="text-body">Punjab,India</span>
+                                            <small>Wed. 20 Mar 2024</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <button type="button" id="logout" class="btn btn-outline-primary">Logout</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+    <section class="h-100 h-custom">
+        <div class="container h-200 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+      
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="h5">Order Summery</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="./img/burger.jpeg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Burger Bonanza: Where Every Bite's a Delight!</p>
+                            <p class="mb-0">FreshLeaf-Café</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button class="btn btn-link px-2" id = "btn1"
+                            onclick="doUpdateDown(this);">
+                            <i class="fas fa-minus"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="0" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button class="btn btn-link px-2" id = "btn2"
+                            onclick="doUpdateUp(this);">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;" id="price1">$0.00</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="border-bottom-0">
+                        <div class="d-flex align-items-center">
+                          <img src="./img/pizza.jpeg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Pizza Paradise: Your Slice of Heaven Awaits!</p>
+                            <p class="mb-0">FreshLeaf-Café</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle border-bottom-0">
+                        <div class="d-flex flex-row">
+                          <button class="btn btn-link px-2" id = "btn3"
+                            onclick="doUpdateDown(this);">
+                            <i class="fas fa-minus"></i>
+                          </button>
+      
+                          <input id="form2" min="0" name="quantity" value="0" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button class="btn btn-link px-2" id = "btn4"
+                            onclick="doUpdateUp(this);">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0" style="font-weight: 500;" id="price2">$0.00</p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img src="./img/pasta.jpeg" class="img-fluid rounded-3"
+                              style="width: 120px;" alt="Book">
+                            <div class="flex-column ms-4">
+                              <p class="mb-2">Pasta Perfection: Indulge in Italian Excellence!</p>
+                              <p class="mb-0">FreshLeaf-Café</p>
+                            </div>
+                          </div>
+                        </th>
+                        <td class="align-middle">
+                          <div class="d-flex flex-row">
+                            <button class="btn btn-link px-2" id = "btn5"
+                              onclick="doUpdateDown(this);"> 
+                              <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <input id="form3" min="0" name="quantity" value="0" type="number"
+                              class="form-control form-control-sm" style="width: 50px;" />
+        
+                            <button class="btn btn-link px-2" id = "btn6"
+                              onclick="doUpdateUp(this);">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          <p class="mb-0" style="font-weight: 500;" id="price3">$0.00</p>
+                        </td>
+                      </tr>
+                    <tr>
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img src="./img/noodles.jpeg" class="img-fluid rounded-3"
+                              style="width: 120px;" alt="Book">
+                            <div class="flex-column ms-4">
+                              <p class="mb-2">Noodle Nirvana: Dive into Deliciousness!</p>
+                              <p class="mb-0">FreshLeaf-Café</p>
+                            </div>
+                          </div>
+                        </th>
+                        <td class="align-middle">
+                          <div class="d-flex flex-row">
+                            <button class="btn btn-link px-2" id = "btn7"
+                              onclick="doUpdateDown(this);"> 
+                              <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <input id="form4" min="0" name="quantity" value="0" type="number"
+                              class="form-control form-control-sm" style="width: 50px;" />
+        
+                            <button class="btn btn-link px-2" id = "btn8"
+                              onclick="doUpdateUp(this);">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          <p class="mb-0" style="font-weight: 500;" id="price4">$0.00</p>
+                        </td>
+                      </tr>
+                    <tr>
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img src="./img/shake.jpeg" class="img-fluid rounded-3"
+                              style="width: 120px;" alt="Book">
+                            <div class="flex-column ms-4">
+                              <p class="mb-2">Shake It Up: Irresistible Shakes to Satisfy Every Craving!</p>
+                              <p class="mb-0">FreshLeaf-Café</p>
+                            </div>
+                          </div>
+                        </th>
+                        <td class="align-middle">
+                          <div class="d-flex flex-row">
+                            <button class="btn btn-link px-2" id = "btn9"
+                              onclick="doUpdateDown(this);">
+                              <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <input id="form5" min="0" name="quantity" value="0" type="number"
+                              class="form-control form-control-sm" style="width: 50px;" />
+        
+                            <button class="btn btn-link px-2" id = "btn10"
+                              onclick="doUpdateUp(this);">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          <p class="mb-0" style="font-weight: 500;" id="price5">$0.00</p>
+                        </td>
+                      </tr>
+                    <tr>
+                        <th scope="row">
+                          <div class="d-flex align-items-center">
+                            <img src="./img/combo.jpeg" class="img-fluid rounded-3"
+                              style="width: 120px;" alt="Book">
+                            <div class="flex-column ms-4">
+                              <p class="mb-2">Triple Treat Combo: Burgers, Fries, and Coke - The Ultimate Satisfaction!</p>
+                              <p class="mb-0">FreshLeaf-Café</p>
+                            </div>
+                          </div>
+                        </th>
+                        <td class="align-middle">
+                          <div class="d-flex flex-row">
+                            <button class="btn btn-link px-2" id = "btn11"
+                              onclick="doUpdateDown(this);">
+                              <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <input id="form6" min="0" name="quantity" value="0" type="number"
+                              class="form-control form-control-sm" style="width: 50px;" />
+        
+                            <button class="btn btn-link px-2" id = "btn12"
+                              onclick="doUpdateUp(this);">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          <p class="mb-0" style="font-weight: 500;" id="price6">$0.00</p>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+      <br>
+      <button type="button" style="margin-left: 90%;" data-bs-toggle="modal" data-bs-target="#chkModal" class="btn btn-primary btn-block btn-lg" id="checkout">
+        <div class="d-flex justify-content-between">
+          <span>Checkout</span>
+        </div>
+      </button>
+      </section>
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark footer py-5" style="margin-top: 40%;">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#" class="d-flex flex-column flex-wrap">
+                                <p class="text-white mb-0 display-6" style="margin-bottom: 1%;">Freshleaf</p>
+                                <small class="text-light" style="letter-spacing: 11px; line-height: 0;margin-left: 20%;">Café</small>
+                            </a>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="d-flex position-relative rounded-pill overflow-hidden">
+                                <input class="form-control border-0 w-100 py-3 rounded-pill" type="email" placeholder="example@gmail.com">
+                                <button type="submit" class="btn btn-primary border-0 py-3 px-5 rounded-pill text-white position-absolute" style="top: 0; right: 0;">Subscribe Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="footer-item-1">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <p class="text-secondary line-h">Address: <span class="text-white">Chitkara University , Rajpura</span></p>
+                            <p class="text-secondary line-h">Email: <span class="text-white">abc@gmail.com</span></p>
+                            <p class="text-secondary line-h">Phone: <span class="text-white">+91 62807XXXXX</span></p>
+                            <div class="d-flex line-h">
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter text-dark"></i></a>
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f text-dark"></i></a>
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube text-dark"></i></a>
+                                <a class="btn btn-light btn-md-square rounded-circle" href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in text-dark"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="footer-item-2">
+                            <div class="d-flex flex-column mb-4">
+                                <h4 class="mb-4 text-white">Recent Posts</h4>
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle border border-2 border-primary overflow-hidden">
+                                            <img src="img/footer-1.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column ps-4">
+                                            <p class="text-uppercase text-white mb-3">Tasty</p>
+                                            <a href="#" class="h6 text-white">
+                                                Get the best delicious tasty ,food
+                                            </a>
+                                            <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9, 2024</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle border border-2 border-primary overflow-hidden">
+                                            <img src="img/footer-2.jpg" class="img-zoominimg-fluid rounded-circle w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column ps-4">
+                                            <p class="text-uppercase text-white mb-3">Stay Ahead of Trends</p>
+                                            <a href="#" class="h6 text-white">
+                                                Discover the latest in food innovations!
+                                            </a>
+                                            <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small></small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="d-flex flex-column text-start footer-item-3">
+                            <h4 class="mb-4 text-white">Categories</h4>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> Italian</a>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> Mexican</a>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> South-Indian</a>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> North-Indian</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="footer-item-4">
+                            <h4 class="mb-4 text-white">Our Gallary</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                               <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-2.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                               <div class="col-4">
+                                <div class="rounded overflow-hidden">
+                                    <img src="img/footer-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                </div>
+                           </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Nikhil and Chinar</a>, All right reserved.</span>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <div class="modal fade" style="width: 85%;"  id="chkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" 
+            <div class="modal-content" style="width: 700px;">
+              <div class="modal-header" style="background-color: cornflowerblue;">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Billing</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="width: 700px;">
+                <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+                  <div class="card-body p-4">
+        
+                    <div class="row">
+                      <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                        <form>
+                          <div class="d-flex flex-row pb-3">
+                            <div class="d-flex align-items-center pe-2">
+                              <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v"
+                                value="" aria-label="..." checked />
+                            </div>
+                            <div class="rounded border w-100 p-3">
+                              <p class="d-flex align-items-center mb-0">
+                                <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Credit
+                                Card
+                              </p>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-row pb-3">
+                            <div class="d-flex align-items-center pe-2">
+                              <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v"
+                                value="" aria-label="..." />
+                            </div>
+                            <div class="rounded border w-100 p-3">
+                              <p class="d-flex align-items-center mb-0">
+                                <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
+                              </p>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-row">
+                            <div class="d-flex align-items-center pe-2">
+                              <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                                value="" aria-label="..." />
+                            </div>
+                            <div class="rounded border w-100 p-3">
+                              <p class="d-flex align-items-center mb-0">
+                                <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>PayPal
+                              </p>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-md-6 col-lg-4 col-xl-6">
+                        <div class="row">
+                          <div class="col-12 col-xl-6">
+                            <div class="form-outline mb-4 mb-xl-5">
+                              <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                placeholder="Enter Card Holder Name" />
+                              <label class="form-label" for="typeName">Name on card</label>
+                            </div>
+        
+                            <div class="form-outline mb-4 mb-xl-5">
+                              <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY"
+                                size="7" id="exp" minlength="7" maxlength="7" />
+                              <label class="form-label" for="typeExp">Expiration</label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-xl-6">
+                            <div class="form-outline mb-4 mb-xl-5">
+                              <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                                placeholder="Enter Your Card Number" minlength="19" maxlength="19" />
+                              <label class="form-label" for="typeText">Card Number</label>
+                            </div>
+        
+                            <div class="form-outline mb-4 mb-xl-5">
+                              <input type="password" id="typeText" class="form-control form-control-lg"
+                                placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                              <label class="form-label" for="typeText">Cvv</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-xl-3">
+                        <div class="d-flex justify-content-between" style="font-weight: 500;">
+                          <p class="mb-2">Subtotal</p>
+                          <p class="mb-2" id="sub">$0.00</p>
+                        </div>
+        
+                        <div class="d-flex justify-content-between" style="font-weight: 500;">
+                          <p class="mb-0">Shipping</p>
+                          <p class="mb-0">$2.00</p>
+                        </div>
+        
+                        <hr class="my-4">
+        
+                        <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                          <p class="mb-2">Total (tax included)</p>
+                          <p class="mb-2" id="total">$2.00</p>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Pay</button>
+                </div>
+            </div>
+          </div>
+        </div>
+</body>
+ <!-- JavaScript Libraries -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/waypoints/waypoints.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+ <script src="./js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</html>

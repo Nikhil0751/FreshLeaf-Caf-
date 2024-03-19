@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>FreshLeaf-Café</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+    <script>
+        $(document).ready(function(){
+            if(!localStorage.getItem("ActiveUser"))
+      location.replace("./index.html");
+            $("#logout").click(function(){
+                localStorage.removeItem("ActiveUser");
+                location.href="./index.html";
+       })
+        })
+    </script>
+    <style>
+        .sokhay
+        {
+            color: green;
+            font-weight: bold;
+            background-color: lightgreen;
+            float: left;
+            padding: 1px 10px 3px 10px;
+            margin-top: 5px;
+        }
+        .okhay
+        {
+            color: red;
+            font-weight: bold;
+            background-color: lightpink;
+            float: left;
+            padding: 1px 10px 3px 10px;
+            margin-top: 5px;
+        }
+     </style>
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid sticky-top px-0" >
+            <div class="container-fluid topbar bg-dark d-none d-lg-block" style="display: flex;flex-direction: row;">
+                <div class="container px-0" >
+                    <div class="topbar-top d-flex justify-content-between flex-lg-wrap">
+                        <div class="top-info flex-grow-0">
+                            <span class="rounded-circle btn-sm-square bg-primary me-2">
+                                <i class="fas fa-bolt text-white"></i>
+                            </span>
+                            <div class="pe-2 me-3 border-end border-white d-flex align-items-center">
+                                <p class="mb-0 text-white fs-6 fw-normal">Welcome</p>
+                            </div>
+                            <div class="overflow-hidden" style="width: 650px;">
+                                <div id="note" class="ps-2">
+                                    <img src="img/features-fashion.jpg" class="img-fluid rounded-circle border border-3 border-primary me-2" style="width: 30px; height: 30px;" alt="">
+                                    <a href="#"><p class="text-white mb-0 link-hover">"Savor the flavor with our dishes where every bite is a taste of perfection!"</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-link flex-lg-wrap">
+                            <i class="fas fa-calendar-alt text-white border-end border-secondary pe-2 me-2"> <span class="text-body">Wednesday, 20<sup>th</sup> March</span></i>
+                            <div class="d-flex icon">
+                                <p class="mb-0 text-white me-2">Follow Us:</p>
+                                <a href="https://www.instagram.com/cn_groups/" target="_blank" class="me-2"><i class="fab fa-facebook-f text-body link-hover"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank" class="me-2"><i class="fab fa-twitter text-body link-hover"></i></a>
+                                <a href="https://twitter.com/" target="_blank" class="me-2"><i class="fab fa-instagram text-body link-hover"></i></a>
+                                <a href="https://www.youtube.com/" target="_blank" class="me-2"><i class="fab fa-youtube text-body link-hover"></i></a>
+                                <a href="https://www.linkedin.com/feed/" target="_blank" class="me-2"><i class="fab fa-linkedin-in text-body link-hover"></i></a>
+                                <a href="https://www.skype.com/" target="_blank" class="me-2"><i class="fab fa-skype text-body link-hover"></i></a>
+                                <a href="https://in.pinterest.com/" target="_blank" class=""><i class="fab fa-pinterest-p text-body link-hover"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-light">
+                <div class="container px-0">
+                    <nav class="navbar navbar-light navbar-expand-xl">
+                        <a href="index.html" class="navbar-brand mt-3">
+                            <p class="text-primary display-6 mb-2" style="line-height: 0.5;">FreshLeaf</p>
+                            <small class="text-body fw-normal" style="letter-spacing: 12px;"><center>Café</center></small>
+                        </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-primary"></span>
+                        </button>
+                        <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto border-top">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="cart.html" class="nav-item nav-link">MyCart</a>
+                                <a href="detail-page.html" class="nav-item nav-link">More Info</a>
+                                <a href="404.html" class="nav-item nav-link">Traffic Demo</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                            </div>
+                            <div class="d-flex flex-nowrap border-top pt-3 pt-xl-0">
+                                <div class="d-flex">
+                                    <img src="img/weather-icon.png" class="img-fluid w-100 me-2" alt="">
+                                    <div class="d-flex align-items-center">
+                                        <strong class="fs-4 text-secondary">28°C</strong>
+                                        <div class="d-flex flex-column ms-2" style="width: 150px;">
+                                            <span class="text-body">Punjab,India</span>
+                                            <small>Wed. 20 Mar 2024</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- <button class="btn-search btn border border-primary btn-md-square rounded-circle bg-white my-auto" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button> -->
+                                <button type="button" id="logout" class="btn btn-outline-primary">Logout</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Features Start -->
+        <div class="container-fluid features mb-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="row g-4 align-items-center features-item">
+                            <div class="col-4">
+                                <div class="rounded-circle position-relative">
+                                    <div class="overflow-hidden rounded-circle">
+                                        <img src="img/features-sports-1.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                    </div>
+                                    <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="features-content d-flex flex-column">
+                                    <p class="text-uppercase mb-2">Tasty</p>
+                                    <a href="#" class="h6">
+                                        Get the best delicious, food ever.
+                                    </a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="row g-4 align-items-center features-item">
+                            <div class="col-4">
+                                <div class="rounded-circle position-relative">
+                                    <div class="overflow-hidden rounded-circle">
+                                        <img src="img/features-technology.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                    </div>
+                                    <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="features-content d-flex flex-column">
+                                    <p class="text-uppercase mb-2">Stay Ahead of Trends</p>
+                                    <a href="#" class="h6">
+                                        Discover the Latest in Food Innovation!
+                                    </a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="row g-4 align-items-center features-item">
+                            <div class="col-4">
+                                <div class="rounded-circle position-relative">
+                                    <div class="overflow-hidden rounded-circle">
+                                        <img src="img/features-fashion.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                    </div>
+                                    <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="features-content d-flex flex-column">
+                                    <p class="text-uppercase mb-2">Stay Fashionably</p>
+                                    <a href="#" class="h6">
+                                        Explore the Latest Trends and News.
+                                    </a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="row g-4 align-items-center features-item">
+                            <div class="col-4">
+                                <div class="rounded-circle position-relative">
+                                    <div class="overflow-hidden rounded-circle">
+                                        <img src="img/features-life-style.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                    </div>
+                                    <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="features-content d-flex flex-column">
+                                    <p class="text-uppercase mb-2">Elevate Lifestyle</p>
+                                    <a href="#" class="h6">
+                                        Get the best speak market.
+                                    </a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+
+
+        <!-- Main Post Section Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-lg-7 col-xl-8 mt-0">
+                        <div class="position-relative overflow-hidden rounded">
+                            <img src="img/news-1.jpg" class="img-fluid rounded img-zoomin w-100" alt="">
+                            <div class="d-flex justify-content-center px-4 position-absolute flex-wrap" style="bottom: 10px; left: 0;">
+                                <a href="#" class="text-white me-3 link-hover"><i class="fa fa-clock"></i> 60 minute Delivery</a>
+                                <a href="#" class="text-white me-3 link-hover"><i class="fa fa-eye"></i> 3.5k Views</a>
+                                <a href="#" class="text-white me-3 link-hover"><i class="fa fa-comment-dots"></i> 05 Reviews</a>
+                                <a href="#" class="text-white link-hover"><i class="fa fa-arrow-up"></i> 1.5k Orders</a>
+                            </div>
+                        </div>
+                        <div class="border-bottom py-3">
+                            <a href="#" class="display-4 text-dark mb-0 link-hover">Savor the Flavor: Discover Culinary Delights!</a>
+                        </div>
+                        <p class="mt-3 mb-4">Experience culinary excellence with our premium ingredients, meticulous craftsmanship, and unwavering commitment to delivering unparalleled taste sensations.
+                        </p>
+                        <div class="bg-light p-4 rounded">
+                            <div class="news-2">
+                                <h3 class="mb-4">Top Ingredients</h3>
+                            </div>
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/news-2.jpg" class="img-fluid rounded img-zoomin w-100" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="h4">Transform your dishes with our aromatic and flavorful masalas – where every sprinkle brings your recipes to life</a>
+                                        <p class="mb-0 fs-5"><i class="fa fa-clock"> Quick Cooking</i> </p>
+                                        <p class="mb-0 fs-5"><i class="fa fa-eye"> 350+ Reviews</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-xl-4">
+                       <div class="bg-light rounded p-4 pt-0">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/news-3.jpg" class="img-fluid rounded img-zoomin w-100" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex flex-column">
+                                        <a href="#" class="h4 mb-2">Get the best speak market, news.</a>
+                                        <p class="fs-5 mb-0"><i class="fa fa-clock"> 60 minute Delivery</i> </p>
+                                        <p class="fs-5 mb-0"><i class="fa fa-eye"> 300+ Orders</i></p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-5">
+                                            <div class="overflow-hidden rounded">
+                                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="features-content d-flex flex-column">
+                                                <a href="#" class="h6">Get the best delicious food <br> ever</a>
+                                                <small><i class="fa fa-clock"> 60 minutes delivery</i> </small>
+                                                <small><i class="fa fa-eye"> 320+ Orders</i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-5">
+                                            <div class="overflow-hidden rounded">
+                                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="features-content d-flex flex-column">
+                                                <a href="#" class="h6">Experience a symphony of taste sensations that redefine deliciousness</a>
+                                                <small><i class="fa fa-clock"> 60 minutes Delivery</i> </small>
+                                                <small><i class="fa fa-eye"> 150+ Orders</i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-5">
+                                            <div class="overflow-hidden rounded">
+                                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="features-content d-flex flex-column">
+                                                <a href="#" class="h6">Savor the finest ingredients crafted into mouthwatering delights</a>
+                                                <small><i class="fa fa-clock"> 60 minutes Delivery</i> </small>
+                                                <small><i class="fa fa-eye"> 220+ Orders</i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-5">
+                                            <div class="overflow-hidden rounded">
+                                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="features-content d-flex flex-column">
+                                                <a href="#" class="h6">Indulge in exquisite flavors that tantalize your taste buds</a>
+                                                <small><i class="fa fa-clock"> 60 minutes Delivery</i> </small>
+                                                <small><i class="fa fa-eye"> 380+ Orders</i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-5">
+                                            <div class="overflow-hidden rounded">
+                                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="features-content d-flex flex-column">
+                                                <a href="#" class="h6">Embark on a culinary journey like no other .</a>
+                                                <small><i class="fa fa-clock">60 minutes Delivery</i> </small>
+                                                <small><i class="fa fa-eye"> 500+ Orders</i></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Post Section End -->
+
+
+        <!-- Banner Start -->
+        <div class="container-fluid py-5 my-5" style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="mb-4 text-primary">FreshLeaf-Café
+                            </h1>
+                        <h1 class="mb-4">Stay Connected: Weekly Flavor Chronicles Await!</h1>
+                        <p class="text-dark mb-4 pb-2">Introducing our latest culinary creations, curated with innovative flavors that will tantalize your taste buds and leave you craving for more."
+                        </p>
+                        <div class="position-relative mx-auto">
+                            <input class="form-control w-100 py-3 rounded-pill" type="email" placeholder="Your Busines Email">
+                            <button type="submit" class="btn btn-primary py-3 px-5 position-absolute rounded-pill text-white h-100" style="top: 0; right: 0;">Subscribe Now</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="rounded">
+                            <img src="img/banner-img.jpg" class="img-fluid rounded w-100 rounded" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+
+
+        <!-- Latest News Start -->
+        <div class="container-fluid latest-news py-5">
+            <div class="container py-5">
+                <h2 class="mb-4">Recently Added</h2>
+                <div class="latest-news-carousel owl-carousel">
+                    <div class="latest-news-item">
+                        <div class="bg-light rounded">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="d-flex flex-column p-4">
+                                <a href="#" class="h4">Embark on a culinary journey like no other can possibly achieve </a>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-news-item">
+                        <div class="bg-light rounded">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="d-flex flex-column p-4">
+                                <a href="#" class="h4">Indulge in exquisite flavors that tantalize your taste buds</a>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2023</small>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-news-item">
+                        <div class="bg-light rounded">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="d-flex flex-column p-4">
+                                <a href="#" class="h4">Savor the finest ingredients crafted into mouthwatering delights,</a>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2023</small>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-news-item">
+                        <div class="bg-light rounded">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="d-flex flex-column p-4">
+                                <a href="#" class="h4">Experience a symphony of taste sensations that redefine deliciousness</a>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2023</small>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-news-item">
+                        <div class="bg-light rounded">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="d-flex flex-column p-4">
+                                <a href="#" class="h4 ">Discover gastronomic perfection with every delectable bite.</a>
+                                <div class="d-flex justify-content-between">
+<a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                    <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2023</small>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest News End -->
+
+
+        <!-- Most Populer News Start -->
+        <div class="container-fluid populer-news py-5">
+            <div class="container py-5">
+                <div class="tab-class mb-4">
+                    <div class="row g-4">
+                        <div class="col-lg-8 col-xl-9">
+                            <div class="d-flex flex-column flex-md-row justify-content-md-between border-bottom mb-4">
+                                <h1 class="mb-4">Top Rated</h1>
+                                <ul class="nav nav-pills d-inline-flex text-center">
+                                    <li class="nav-item mb-3">
+                                        <a class="d-flex py-2 bg-light rounded-pill active me-2" data-bs-toggle="pill" href="#tab-1">
+                                            <span class="text-dark" style="width: 100px;">New</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="d-flex py-2 bg-light rounded-pill me-2" data-bs-toggle="pill" href="#tab-2">
+                                            <span class="text-dark" style="width: 100px;">North</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="d-flex py-2 bg-light rounded-pill me-2" data-bs-toggle="pill" href="#tab-3">
+                                            <span class="text-dark" style="width: 100px;">South</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="d-flex py-2 bg-light rounded-pill me-2" data-bs-toggle="pill" href="#tab-4">
+                                            <span class="text-dark" style="width: 100px;">Italian</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-3">
+                                        <a class="d-flex py-2 bg-light rounded-pill me-2" data-bs-toggle="pill" href="#tab-5">
+                                            <span class="text-dark" style="width: 100px;">Mexican</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content mb-4">
+                                <div id="tab-1" class="tab-pane fade show p-0 active">
+                                    <div class="row g-4">
+                                        <div class="col-lg-8">
+                                            <div class="position-relative rounded overflow-hidden">
+                                                <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">                                              
+                                                    New
+                                                </div>
+                                            </div>
+                                            <div class="my-4">
+                                                <a href="#" class="h4">Savor the Flavor: Discover Culinary Delights!</a>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-eye"></i> 3.5k Views</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+                                                <a href="#" class="text-dark link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+                                            </div>
+                                            <p class="my-4">Experience culinary excellence with our premium ingredients, meticulous craftsmanship, and unwavering commitment to delivering unparalleled taste sensations.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="row g-4">
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">New</p>
+                                                                <a href="#" class="h6">Embark on a culinary journey like no other</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">New</p>
+                                                                <a href="#" class="h6">Indulge in exquisite flavors that tantalize your taste buds,</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">New</p>
+                                                                <a href="#" class="h6">Savor the finest ingredients crafted into mouthwatering delights</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">New</p>
+                                                                <a href="#" class="h6">Experience a symphony of taste sensations that redefine deliciousness</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">New</p>
+                                                                <a href="#" class="h6">Discover gastronomic perfection with every delectable bite</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-8">
+                                            <div class="position-relative rounded overflow-hidden">
+                                                <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">                                              
+                                                    North
+                                                </div>
+                                            </div>
+                                            <div class="my-3">
+                                                <a href="#" class="h4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                                            </div>
+                                            <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum has been the industry's standard dummy..
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-eye"></i> 3.5k Views</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+                                                <a href="#" class="text-dark link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="row g-4">
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">North</p>
+                                                                <a href="#" class="h6">Embark on a culinary journey like no other</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">North</p>
+                                                                <a href="#" class="h6">Indulge in exquisite flavors that tantalize your taste buds</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">North</p>
+                                                                <a href="#" class="h6">Savor the finest ingredients crafted into mouthwatering delights</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">North</p>
+                                                                <a href="#" class="h6">Experience a symphony of taste sensations that redefine deliciousness</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">North</p>
+                                                                <a href="#" class="h6">Discover gastronomic perfection with every delectable bite</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-3" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-8">
+                                            <div class="position-relative rounded overflow-hidden">
+                                                <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">                                              
+                                                    South
+                                                </div>
+                                            </div>
+                                            <div class="my-3">
+                                                <a href="#" class="h4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                                            </div>
+                                            <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum has been the industry's standard dummy..
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-eye"></i> 3.5k Views</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+                                                <a href="#" class="text-dark link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="row g-4">
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">South</p>
+                                                                <a href="#" class="h6">Embark on a culinary journey like no other</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">South</p>
+                                                                <a href="#" class="h6">Indulge in exquisite flavors that tantalize your taste buds</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">South</p>
+                                                                <a href="#" class="h6">Savor the finest ingredients crafted into mouthwatering delights</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">South</p>
+                                                                <a href="#" class="h6">Experience a symphony of taste sensations that redefine deliciousness</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">South</p>
+                                                                <a href="#" class="h6">Discover gastronomic perfection with every delectable bite</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-4" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-8">
+                                            <div class="position-relative rounded overflow-hidden">
+                                                <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">                                              
+                                                    Italian
+                                                </div>
+                                            </div>
+                                            <div class="my-3">
+                                                <a href="#" class="h4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                                            </div>
+                                            <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-eye"></i> 3.5k Views</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+                                                <a href="#" class="text-dark link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="row g-4">
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Italian</p>
+                                                                <a href="#" class="h6">Embark on a culinary journey like no other</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Italian</p>
+                                                                <a href="#" class="h6">Indulge in exquisite flavors that tantalize your taste buds,</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Italian</p>
+                                                                <a href="#" class="h6">Savor the finest ingredients crafted into mouthwatering delights,</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Italian</p>
+                                                                <a href="#" class="h6">Experience a symphony of taste sensations that redefine deliciousness,</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Italian</p>
+                                                                <a href="#" class="h6">Discover gastronomic perfection with every delectable bite</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-5" class="tab-pane fade show p-0">
+                                    <div class="row g-4">
+                                        <div class="col-lg-8">
+                                            <div class="position-relative rounded overflow-hidden">
+                                                <img src="img/news-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">                                              
+                                                    Mexican
+                                                </div>
+                                            </div>
+                                            <div class="my-3">
+                                                <a href="#" class="h4">World Happiness Report 2023: What's the highway to happiness?</a>
+                                            </div>
+                                            <p class="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-eye"></i> 3.5k Views</a>
+                                                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+                                                <a href="#" class="text-dark link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="row g-4">
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Mexican</p>
+                                                                <a href="#" class="h6">Embark on a culinary journey like no other</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Mexican</p>
+                                                                <a href="#" class="h6">Indulge in exquisite flavors that tantalize your taste buds</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Mexican</p>
+                                                                <a href="#" class="h6">Savor the finest ingredients crafted into mouthwatering delights</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Mexican</p>
+                                                                <a href="#" class="h6">Experience a symphony of taste sensations that redefine deliciousness</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i>June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row g-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <div class="overflow-hidden rounded">
+                                                                <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <div class="features-content d-flex flex-column">
+                                                                <p class="text-uppercase mb-2">Mexican</p>
+                                                                <a href="#" class="h6">Discover gastronomic perfection with every delectable bite.</a>
+                                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom mb-4">
+                                <h2 class="my-4">Most Ordered</h2>
+                            </div>
+                            <div class="whats-carousel owl-carousel">
+                                <div class="latest-news-item">
+                                    <div class="bg-light rounded">
+                                        <div class="rounded-top overflow-hidden">
+                                            <img src="img/news-7.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column p-4">
+                                            <a href="#" class="h4">Embark on a culinary journey like no other,</a>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="whats-item">
+                                    <div class="bg-light rounded">
+                                        <div class="rounded-top overflow-hidden">
+                                            <img src="img/news-6.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column p-4">
+                                            <a href="#" class="h4">Indulge in exquisite flavors that tantalize your taste buds,</a>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="whats-item">
+                                    <div class="bg-light rounded">
+                                        <div class="rounded-top overflow-hidden">
+                                            <img src="img/news-3.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column p-4">
+                                            <a href="#" class="h4">Savor the finest ingredients crafted into mouthwatering delights,</a>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="whats-item">
+                                    <div class="bg-light rounded">
+                                        <div class="rounded-top overflow-hidden">
+                                            <img src="img/news-4.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column p-4">
+                                            <a href="#" class="h4">Experience a symphony of taste sensations that redefine deliciousness,</a>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="whats-item">
+                                    <div class="bg-light rounded">
+                                        <div class="rounded-top overflow-hidden">
+                                            <img src="img/news-5.jpg" class="img-zoomin img-fluid rounded-top w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column p-4">
+                                            <a href="#" class="h4">Discover gastronomic perfection with every delectable bite.,</a>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#" class="small text-body link-hover">by FreshLeaf-Café</a>
+                                                <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 lifestyle">
+                                <div class="border-bottom mb-4">
+                                    <h1 class="mb-4">Life Style</h1>
+                                </div>
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div class="lifestyle-item rounded">
+                                            <img src="img/lifestyle-1.jpg" class="img-fluid w-100 rounded" alt="">
+                                            <div class="lifestyle-content">
+                                               <div class="mt-auto">
+                                                    <a href="#" class="h4 text-white link-hover">There are many variations of passages of Lorem Ipsum available,</a>
+                                                    <div class="d-flex justify-content-between mt-4">
+                                                        <a href="#" class="small text-white link-hover">By FreshLeaf-Café</a>
+                                                        <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="lifestyle-item rounded">
+                                            <img src="img/lifestyle-2.jpg" class="img-fluid w-100 rounded" alt="">
+                                            <div class="lifestyle-content">
+                                               <div class="mt-auto">
+                                                    <a href="#" class="h4 text-white link-hover">There are many variations of passages of Lorem Ipsum available,</a>
+                                                    <div class="d-flex justify-content-between mt-4">
+                                                        <a href="#" class="small text-white link-hover">By Willium Smith</a>
+                                                        <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> June, 18<sup>th</sup> 2024</small>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-3">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="p-3 rounded border">
+                                        <h4 class="mb-4">Stay Connected</h4>
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <a href="#" class="w-100 rounded btn btn-primary d-flex align-items-center p-3 mb-2">
+                                                    <i class="fab fa-facebook-f btn btn-light btn-square rounded-circle me-3"></i>
+                                                    <span class="text-white">13,977 Fans</span>
+                                                </a>
+                                                <a href="#" class="w-100 rounded btn btn-danger d-flex align-items-center p-3 mb-2">
+                                                    <i class="fab fa-twitter btn btn-light btn-square rounded-circle me-3"></i>
+                                                    <span class="text-white">21,798 Follower</span>
+                                                </a>
+                                                <a href="#" class="w-100 rounded btn btn-warning d-flex align-items-center p-3 mb-2">
+                                                    <i class="fab fa-youtube btn btn-light btn-square rounded-circle me-3"></i>
+                                                    <span class="text-white">7,999 Subscriber</span>
+                                                </a>
+                                                <a href="#" class="w-100 rounded btn btn-dark d-flex align-items-center p-3 mb-2">
+                                                    <i class="fab fa-instagram btn btn-light btn-square rounded-circle me-3"></i>
+                                                    <span class="text-white">19,764 Follower</span>
+                                                </a>
+                                                <a href="#" class="w-100 rounded btn btn-secondary d-flex align-items-center p-3 mb-2">
+                                                    <i class="bi-cloud btn btn-light btn-square rounded-circle me-3"></i>
+                                                    <span class="text-white">31,999 Subscriber</span>
+                                                </a>
+                                                <a href="#" class="w-100 rounded btn btn-warning d-flex align-items-center p-3 mb-4">
+                                                    <i class="fab fa-dribbble btn btn-light btn-square rounded-circle me-3"></i>
+                                                    <span class="text-white">37,999 Subscriber</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h4 class="my-4">Popular</h4>
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <div class="row g-4 align-items-center features-item">
+                                                    <div class="col-4">
+                                                        <div class="rounded-circle position-relative">
+                                                            <div class="overflow-hidden rounded-circle">
+                                                                <img src="img/features-sports-1.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                                            </div>
+                                                            <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="features-content d-flex flex-column">
+                                                            <p class="text-uppercase mb-2">New</p>
+                                                            <a href="#" class="h6">
+                                                                Get the best speak market, news.
+                                                            </a>
+                                                            <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small></small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row g-4 align-items-center features-item">
+                                                    <div class="col-4">
+                                                        <div class="rounded-circle position-relative">
+                                                            <div class="overflow-hidden rounded-circle">
+                                                                <img src="img/features-technology.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                                            </div>
+                                                            <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="features-content d-flex flex-column">
+                                                            <p class="text-uppercase mb-2">North</p>
+                                                            <a href="#" class="h6">
+                                                                Get the best speak market, news.
+                                                            </a>
+                                                            <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small></small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row g-4 align-items-center features-item">
+                                                    <div class="col-4">
+                                                        <div class="rounded-circle position-relative">
+                                                            <div class="overflow-hidden rounded-circle">
+                                                                <img src="img/features-fashion.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                                            </div>
+                                                            <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="features-content d-flex flex-column">
+                                                            <p class="text-uppercase mb-2">South</p>
+                                                            <a href="#" class="h6">
+                                                                Get the best speak market, news.
+                                                            </a>
+                                                            <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small></small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="row g-4 align-items-center features-item">
+                                                    <div class="col-4">
+                                                        <div class="rounded-circle position-relative">
+                                                            <div class="overflow-hidden rounded-circle">
+                                                                <img src="img/features-life-style.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                                            </div>
+                                                            <span class="rounded-circle border border-2 border-white bg-primary btn-sm-square text-white position-absolute" style="top: 10%; right: -10px;">3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="features-content d-flex flex-column">
+                                                            <p class="text-uppercase mb-2">Italian</p>
+                                                            <a href="#" class="h6">
+                                                                Get the best speak market, news.
+                                                            </a>
+                                                            <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small></small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <a href="#" class="link-hover btn border border-primary rounded-pill text-dark w-100 py-3 mb-4">View More</a>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="border-bottom my-3 pb-3">
+                                                    <h4 class="mb-0">Trending Tags</h4>
+                                                </div>
+                                                <ul class="nav nav-pills d-inline-flex text-center mb-4">
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Lifestyle</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Sports</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Politics</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Magazine</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Game</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Movie</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">Travel</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item mb-3">
+                                                        <a class="d-flex py-2 bg-light rounded-pill me-2" href="#">
+                                                            <span class="text-dark link-hover" style="width: 90px;">World</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="position-relative banner-2">
+                                                    <img src="img/banner-2.jpg" class="img-fluid w-100 rounded" alt="">
+                                                    <div class="text-center banner-content-2">
+                                                        <h6 class="mb-2">The Most Populer</h6>
+                                                        <p class="text-white mb-2">News & Magazine WP Theme</p>
+                                                        <a href="#" class="btn btn-primary text-white px-4">Shop Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Most Populer News End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark footer py-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#" class="d-flex flex-column flex-wrap">
+                                <p class="text-white mb-0 display-6" style="margin-bottom: 1%;">Freshleaf</p>
+                                <small class="text-light" style="letter-spacing: 11px; line-height: 0;margin-left: 20%;">Café</small>
+                            </a>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="d-flex position-relative rounded-pill overflow-hidden">
+                                <input class="form-control border-0 w-100 py-3 rounded-pill" type="email" placeholder="example@gmail.com">
+                                <button type="submit" class="btn btn-primary border-0 py-3 px-5 rounded-pill text-white position-absolute" style="top: 0; right: 0;">Subscribe Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="footer-item-1">
+                            <h4 class="mb-4 text-white">Get In Touch</h4>
+                            <p class="text-secondary line-h">Address: <span class="text-white">Chitkara University , Rajpura</span></p>
+                            <p class="text-secondary line-h">Email: <span class="text-white">abc@gmail.com</span></p>
+                            <p class="text-secondary line-h">Phone: <span class="text-white">+91 62807XXXXX</span></p>
+                            <div class="d-flex line-h">
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter text-dark"></i></a>
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f text-dark"></i></a>
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube text-dark"></i></a>
+                                <a class="btn btn-light btn-md-square rounded-circle" href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in text-dark"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="footer-item-2">
+                            <div class="d-flex flex-column mb-4">
+                                <h4 class="mb-4 text-white">Recent Posts</h4>
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle border border-2 border-primary overflow-hidden">
+                                            <img src="img/footer-1.jpg" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column ps-4">
+                                            <p class="text-uppercase text-white mb-3">Tasty</p>
+                                            <a href="#" class="h6 text-white">
+                                                Get the best delicious tasty ,food
+                                            </a>
+                                            <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9, 2024</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle border border-2 border-primary overflow-hidden">
+                                            <img src="img/footer-2.jpg" class="img-zoominimg-fluid rounded-circle w-100" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column ps-4">
+                                            <p class="text-uppercase text-white mb-3">Stay Ahead of Trends</p>
+                                            <a href="#" class="h6 text-white">
+                                                Discover the latest in food innovations!
+                                            </a>
+                                            <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> June 18<sup>th</sup>, 2023</small></small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="d-flex flex-column text-start footer-item-3">
+                            <h4 class="mb-4 text-white">Categories</h4>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> Italian</a>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> Mexican</a>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> South-Indian</a>
+                            <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> North-Indian</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-3">
+                        <div class="footer-item-4">
+                            <h4 class="mb-4 text-white">Our Gallary</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-1.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                               <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-2.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-3.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-4.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                                <div class="col-4">
+                                    <div class="rounded overflow-hidden">
+                                        <img src="img/footer-5.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                    </div>
+                               </div>
+                               <div class="col-4">
+                                <div class="rounded overflow-hidden">
+                                    <img src="img/footer-6.jpg" class="img-zoomin img-fluid rounded w-100" alt="">
+                                </div>
+                           </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Nikhil and Chinar</a>, All right reserved.</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-2 border-white rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+   <!-- !==========Modal Starts======================================== -->
+   <div class="modal fade" id="SignModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: cornflowerblue;">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">SIGNUP</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="get" enctype="multipart/form-data">
+          <div class="container">
+            <div class="mb-3">
+            <form >
+              <label for="formGroupExampleInput" class="form-label">Email</label>
+              <input type="text" class="form-control" placeholder="Enter Email" id="txtemail" required>
+              <span id="result"></span>
+            </div>
+            <br>
+            <div class="mb-3 col mt-0">
+              <div class="row" style="height: 35px;">
+                <label for="formGroupExampleInput2" class="form-label" >Password</label> &nbsp;&nbsp;
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="password" class="form-control" style="width: 300px;" required placeholder="Enter Password"
+                    id="txtpwd">
+                </div>
+                <div class="col">
+                  <i class="fa-solid fa-eye" id="txtpwdeye"></i>
+                </div>
+                <span id="errPwd"></span>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="button" class="btn btn-primary"
+                style="margin-top: 20px; margin-left: 70%; margin-bottom: 20px;" id="BUTON" >Sign UP</button>
+            </div>
+            <div>
+              <center>
+                <span id="Sres"></span>
+              </center>
+            </div>
+          </div>
+        </form>
+      </div>
+      </form>
+    </div>
+    </div>
+    </div>
+<!--===================-->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: cornflowerblue;">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">LOGIN</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="get" enctype="multipart/form-data">
+            <div class="container">
+              <div class="row">
+                <div class="mb-3">
+                  <label for="formGroupExampleInput" class="form-label">Email</label>
+                  <input type="text" class="form-control" placeholder="Enter Email" id="txtemailLog">
+                  <span id="resultLog"></span>
+                </div>
+                <div class="mb-3 col mt-0">
+                  <div class="row" style="height: 35px;">
+                    <label for="formGroupExampleInput2" class="form-label">Password</label> &nbsp;&nbsp;
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <input type="password" class="form-control" style="width: 300px;" placeholder="Enter Password"
+                        id="txtpwdlog">
+                      <span id="resultLogPWD"></span>
+                    </div>
+                    <div class="col">
+                      <i class="fa-solid fa-eye" id="txtpwdlogeye"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button type="button" class="btn btn-primary"
+                    style="margin-top: 20px; margin-left: 70%; margin-bottom: 20px;" id="BUTONLOG" data-bs-toggle="modal" data-bs-target="#respModal">Login</button>
+                </div>
+                <div>
+                  <center>
+                    <span id="Lres"></span>
+                  </center>
+                </div>
+              </div>
+
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!--===================-->
+<div class="modal fade" id="respModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: cornflowerblue;">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Response</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span id="loginResp"></span>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="showLog">Login</button>
+          </div>
+      </div>
+    </div>
+  </div>
+<!-- =========================================================================== -->
+
+  
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+
+</html>
